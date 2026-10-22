@@ -1,0 +1,10 @@
+swiftld is a re-implementation of the pairwise-LD path of vcftools 0.1.17 (LGPL-3.0; Danecek, Auton et al.).
+Its behaviour (filters, parsing quirks, pair enumeration, floating-point expressions) is derived from the
+vcftools source, so the derived work is distributed under LGPL-3.0.
+Development started from a verbatim copy of vcftools 0.1.17 src/cpp with the tmpname off-by-one patched.
+
+Vendored code:
+- solver/libdeflate/: decompression part of libdeflate v1.26 (commit 92e6a0d, github.com/ebiggers/libdeflate),
+  MIT licence (solver/libdeflate/COPYING). Only deflate_decompress.c, gzip_decompress.c, crc32.c, utils.c,
+  x86/cpu_features.c and their headers are included.
+Runtime dependency: zlib (zlib licence), used only as a fallback for damaged gzip input.

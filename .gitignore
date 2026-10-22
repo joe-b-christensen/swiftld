@@ -1,0 +1,9 @@
+bench/
+ext/
+failures/
+__pycache__/
+last_eval*.json
+solver/swiftld
+solver/.obj/
+*.ld
+1kg/

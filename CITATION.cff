@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use swiftld, please cite it as below, and also cite vcftools, whose behaviour it reproduces."
+title: "swiftld: a byte-identical drop-in replacement for vcftools pairwise linkage disequilibrium"
+type: software
+version: 1.0.0
+date-released: 2026-10-22
+license: LGPL-3.0-only
+repository-code: "https://github.com/joe-b-christensen/swiftld"
+authors:
+  - family-names: Christensen
+    given-names: Joe
+    orcid: "https://orcid.org/0009-0007-0908-1299"
+    email: joechristensen@clin.au.dk
+    affiliation: "Translational Neuropsychiatry Unit (TNU), Department of Clinical Medicine, Aarhus University, Denmark"
+keywords:
+  - linkage disequilibrium
+  - vcftools
+  - population genetics
+  - performance
+abstract: >-
+  swiftld computes pairwise linkage disequilibrium (vcftools --hap-r2 and --geno-r2) with output byte-identical to
+  vcftools 0.1.17 for every supported option and thread count. On three 1000 Genomes regions it was 826x faster
+  than vcftools and 7.6x faster than PLINK 2, which writes a different file (geometric means, two threads,
+  AVX-512 CPU).
+references:
+  - type: article
+    title: "The variant call format and VCFtools"
+    authors:
+      - family-names: Danecek
+        given-names: Petr
+      - name: "et al."
+    journal: Bioinformatics
+    year: 2011
+    volume: 27
+    start: 2156
+    end: 2158
+    doi: "10.1093/bioinformatics/btr330"
